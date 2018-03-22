@@ -30,3 +30,8 @@
 </p>
 
 QQ群: 717404811
+
+知识星球
+<p align="center">
+  <img width="300" src="https://raw.githubusercontent.com/newtalentxp/rtn/master/image/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83.png">
+</p>
