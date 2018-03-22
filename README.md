@@ -26,7 +26,7 @@
 
 微信
 <p align="center">
-  <img width="300" src="https://github.com/newtalentxp/rtn/blob/master/image/me-wechat.gif?raw=true">
+  <img width="300" src="https://github.com/newtalentxp/rtn/blob/master/image/me-wechat.gif">
 </p>
 
 QQ群: 717404811
