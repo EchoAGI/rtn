@@ -1,0 +1,184 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+.mainYoutubevideo #youtubevideo { // scss-lint:disable IdSelector
+  display: block;
+}
+
+.youtubevideo {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .click-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+  }
+
+  .welcome {
+    max-width: 700px;
+
+    h1 {
+      margin-top: 10px;
+    }
+
+    .welcome-container {
+      max-width: 700px;
+    }
+
+    .welcome-logo {
+      background: transparent;
+      font-size: 10em;
+    }
+  }
+
+  .overlaybar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .overlaybar-content {
+    max-width: 100%;
+    width: 100%;
+
+    form .overlaybar-buttons {
+      position: absolute;
+      right: 23px;
+      top: 6px;
+    }
+  }
+
+  .overlaybar-input {
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+  }
+
+}
+
+.youtubevideopane {
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.youtubecontainer {
+  position: relative;
+
+  &.fullscreen {
+    width: 100%;
+  }
+}
+
+.youtubeplayerinfo {
+  bottom: 10%;
+  left: 0;
+  opacity: 0;
+  pointer-events: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  transition-duration: .2s;
+  transition-property: opacity;
+  z-index: 10;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  div {
+    background-color: #f9f2f4;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 2em;
+    padding: 20px 40px;
+  }
+}
+
+.volumecontrol {
+  background: rgba(0, 0, 0, .6);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding: 4px;
+  pointer-events: auto;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.volume-button {
+  display: inline;
+  min-width: 38px;
+}
+
+.volumebar {
+  display: inline-block;
+  padding: 6px 8px;
+  vertical-align: middle;
+
+  .bar {
+    -webkit-appearance: none;
+    background-color: #aaa;
+    border: 1px solid #aaa;
+    height: 3px;
+    outline: 0;
+    width: 100px;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: #fff;
+      height: 20px;
+      width: 6px;
+    }
+
+    &::-moz-range-track {
+      background: #aaa;
+      border: 0;
+    }
+
+    &::-moz-range-thumb {
+      background-color: #fff;
+      border-radius: 0;
+      height: 20px;
+      width: 6px;
+    }
+
+    &::-moz-focusring {
+      outline: 1px solid #aaa;
+      outline-offset: -1px;
+    }
+  }
+}

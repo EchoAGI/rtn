@@ -1,0 +1,844 @@
+# Korean translations for Spreed WebRTC.
+# Copyright (C) 2014 struktur AG
+# This file is distributed under the same license as the Spreed WebRTC
+# project.
+# Curt Frisemo <curt.frisemo@spreed.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Spreed WebRTC 1.0\n"
+"Report-Msgid-Bugs-To: simon@struktur.de\n"
+"POT-Creation-Date: 2016-02-17 14:15+0100\n"
+"PO-Revision-Date: 2014-04-13 20:30+0900\n"
+"Last-Translator: Curt Frisemo <curt.frisemo@spreed.com>\n"
+"Language-Team: Curt Frisemo <curt.frisemo@spreed.com>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+msgid "Standard view"
+msgstr ""
+
+msgid "Large view"
+msgstr ""
+
+msgid "Kiosk view"
+msgstr ""
+
+msgid "Auditorium"
+msgstr ""
+
+msgid "Start chat"
+msgstr "대화시작"
+
+msgid "Start video call"
+msgstr "화상회의 시작"
+
+msgid "Start audio conference"
+msgstr "음성회의 시작"
+
+msgid "No one else here"
+msgstr ""
+
+msgid "Take"
+msgstr ""
+
+msgid "Retake"
+msgstr ""
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Set as Profile Picture"
+msgstr ""
+
+msgid "Take picture"
+msgstr "사진 찍음"
+
+#, fuzzy
+msgid "Upload picture"
+msgstr "사용자 사진"
+
+msgid "Waiting for camera"
+msgstr "카메라 대기중"
+
+#, fuzzy
+msgid "Picture"
+msgstr "사용자 사진"
+
+msgid "The file couldn't be read."
+msgstr ""
+
+msgid "The file is not an image."
+msgstr ""
+
+#, python-format
+msgid "The file is too large. Max. %d MB."
+msgstr ""
+
+msgid "Select file"
+msgstr ""
+
+msgid "Chat sessions"
+msgstr "대화 세션"
+
+msgid "Room chat"
+msgstr "대화 방"
+
+msgid "Peer to peer"
+msgstr "일대일"
+
+msgid "Close chat"
+msgstr "대화 종료"
+
+#, fuzzy
+msgid "Upload files"
+msgstr "다운로드실패"
+
+msgid "Share my location"
+msgstr ""
+
+#, fuzzy
+msgid "Clear chat"
+msgstr "대화시작"
+
+msgid "is typing..."
+msgstr "입력중"
+
+msgid "has stopped typing..."
+msgstr "입력 종료"
+
+msgid "Type here to chat..."
+msgstr "대화 입력"
+
+msgid "Send"
+msgstr "전송"
+
+msgid "Accept"
+msgstr ""
+
+msgid "Reject"
+msgstr "거부"
+
+msgid "You have no contacts."
+msgstr ""
+
+msgid ""
+"To add new contacts, join a room and create a contact add request by "
+"clicking on the star icon next to a user entry."
+msgstr ""
+
+msgid "Edit contact"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Remove"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Close"
+msgstr "닫음"
+
+msgid "File sharing"
+msgstr "회일 공유"
+
+msgid "File is no longer available"
+msgstr "화일이 유효하지 않습니다"
+
+msgid "Download"
+msgstr "다운로드"
+
+msgid "Open"
+msgstr "열기"
+
+msgid "Unshare"
+msgstr "비공유"
+
+msgid "Retry"
+msgstr "재시도"
+
+msgid "Download failed."
+msgstr "다운로드실패"
+
+msgid "Share a YouTube video"
+msgstr ""
+
+msgid "Share a file as presentation"
+msgstr ""
+
+msgid "Share your screen"
+msgstr "화면 공유하기"
+
+msgid "Chat"
+msgstr "대화"
+
+msgid "Contacts"
+msgstr ""
+
+msgid "Mute microphone"
+msgstr "음성제거"
+
+msgid "Turn camera off"
+msgstr "카메라꺼짐"
+
+msgid "Settings"
+msgstr "설정"
+
+msgid "Loading presentation ..."
+msgstr ""
+
+msgid "Please upload a document"
+msgstr ""
+
+msgid ""
+"Documents are shared with everyone in this call. The supported file types"
+" are PDF and OpenDocument files."
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "You can drag files here too."
+msgstr ""
+
+msgid "Presentation controls"
+msgstr ""
+
+msgid "Prev"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Change room"
+msgstr "방 변경"
+
+msgid "Room"
+msgstr "방"
+
+msgid "Leave room"
+msgstr "방 이동"
+
+msgid "Main"
+msgstr "메인"
+
+msgid "Current room"
+msgstr "현재 방"
+
+msgid "Screen sharing options"
+msgstr "화면 공유 옵션"
+
+msgid "Fit screen."
+msgstr "화면에 맟춤"
+
+#, fuzzy
+msgid "Share screen"
+msgstr "화면 공유하기"
+
+msgid "Please select what to share."
+msgstr ""
+
+#, fuzzy
+msgid "Screen"
+msgstr "화면에 맟춤"
+
+msgid "Window"
+msgstr ""
+
+msgid "Application"
+msgstr ""
+
+msgid "Share the whole screen. Click share to select the screen."
+msgstr ""
+
+msgid "Share a single window. Click share to select the window."
+msgstr ""
+
+msgid ""
+"Share all windows of a application. This can leak content behind windows "
+"when windows get moved. Click share to select the application."
+msgstr ""
+
+#, fuzzy
+msgid "Share"
+msgstr "비공유"
+
+msgid "OK"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Your name"
+msgstr "사용자 이름"
+
+msgid "Your picture"
+msgstr "사용자 사진"
+
+msgid "Status message"
+msgstr ""
+
+msgid "What's on your mind?"
+msgstr ""
+
+msgid ""
+"Your picture, name and status message identify yourself in calls, chats "
+"and rooms."
+msgstr ""
+
+msgid "Your ID"
+msgstr ""
+
+msgid "Register"
+msgstr ""
+
+msgid ""
+"Authenticated by certificate. To log out you have to remove your "
+"certificate from the browser."
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "Create an account"
+msgstr ""
+
+msgid "Sign out"
+msgstr ""
+
+msgid "Manage account"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Microphone"
+msgstr "마이크"
+
+msgid "Camera"
+msgstr "카메라"
+
+msgid "Video quality"
+msgstr "영상 수준"
+
+msgid "Low"
+msgstr "낮음"
+
+msgid "High"
+msgstr "높음"
+
+msgid "HD"
+msgstr "고화질"
+
+msgid "Full HD"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Language"
+msgstr "언어"
+
+msgid "Language changes become active on reload."
+msgstr "언어 변경이 재로드 되고 있습니다"
+
+msgid "Default room"
+msgstr "기본 방"
+
+msgid "Set alternative room to join at start."
+msgstr "시작시에 다른 방에 합류하도록 설정 되었습니다"
+
+#, fuzzy
+msgid "Notifications"
+msgstr "데스크탑에 통보"
+
+msgid "Desktop notification"
+msgstr "데스크탑에 통보"
+
+msgid "Enable"
+msgstr "활성화"
+
+msgid "Denied - check your browser settings"
+msgstr "거부됨 - 브라우저 설정을 확인하세요"
+
+msgid "Allowed"
+msgstr "허락됨"
+
+msgid "Sounds for incoming messages"
+msgstr ""
+
+#, fuzzy
+msgid "Ring on incoming calls"
+msgstr "전화 걸려옴"
+
+msgid "Sounds for users in current room"
+msgstr ""
+
+msgid "Advanced settings"
+msgstr "고급 설정"
+
+msgid "Play audio on same device as selected microphone"
+msgstr ""
+
+msgid "Experimental AEC"
+msgstr ""
+
+msgid "Experimental AGC"
+msgstr ""
+
+msgid "Experimental noise suppression"
+msgstr ""
+
+msgid "Max video frame rate"
+msgstr "비디오프레임 비율 최대화"
+
+msgid "auto"
+msgstr "자동"
+
+#, fuzzy
+msgid "Send stereo audio"
+msgstr "스테레오 음성"
+
+msgid ""
+"Sending stereo audio disables echo cancellation. Enable only if you have "
+"stereo input."
+msgstr ""
+
+msgid "Detect CPU over use"
+msgstr ""
+
+msgid "Automatically reduces video quality as needed."
+msgstr ""
+
+msgid "Optimize for high resolution video"
+msgstr ""
+
+msgid "Reduce video noise"
+msgstr ""
+
+msgid "Prefer VP9 video codec"
+msgstr ""
+
+msgid "Enable experiments"
+msgstr ""
+
+msgid "Show advanced settings"
+msgstr "고급 설정 보기"
+
+msgid "Hide advanced settings"
+msgstr "고급 설정 감추기"
+
+msgid "Remember settings"
+msgstr "설정 기억"
+
+msgid ""
+"Your ID will still be kept - press the log out button above to delete the"
+" ID."
+msgstr ""
+
+msgid "Room link"
+msgstr ""
+
+#, fuzzy
+msgid "Invite by Email"
+msgstr "이메일로 공유"
+
+msgid "Invite with Facebook"
+msgstr ""
+
+msgid "Invite with Twitter"
+msgstr ""
+
+msgid "Invite with Google Plus"
+msgstr ""
+
+msgid "Invite with XING"
+msgstr ""
+
+msgid "Initializing"
+msgstr "초기화"
+
+msgid "Online"
+msgstr "온라인"
+
+msgid "Calling"
+msgstr "전화걸기"
+
+msgid "Hangup"
+msgstr "전화끊기"
+
+msgid "In call with"
+msgstr "전화중"
+
+msgid "Conference with"
+msgstr "회의중"
+
+msgid "Your are offline"
+msgstr "오프라인 입니다"
+
+msgid "Go online"
+msgstr "온라인에 연결합니다"
+
+msgid "Connection interrupted"
+msgstr "연결이 중단"
+
+msgid "An error occured"
+msgstr "에러 발생"
+
+msgid "Incoming call"
+msgstr "전화 걸려옴"
+
+msgid "from"
+msgstr "부터"
+
+msgid "Accept call"
+msgstr "전화 받음"
+
+msgid "Waiting for camera/microphone access"
+msgstr "카메라/마이크 사용을 기다림"
+
+msgid "Your audio level"
+msgstr "음성크기"
+
+msgid "Checking camera and microphone access."
+msgstr "카메라와 마이크의 사용을 확인 하세요"
+
+msgid "Please allow access to your camera and microphone."
+msgstr "카메라와 마이크의 사용을 허용 하세요"
+
+msgid "Camera / microphone access required."
+msgstr "카메라/마이크 사용이 필요합니다"
+
+msgid ""
+"Please check your browser settings and allow camera and microphone access"
+" for this site."
+msgstr "이 사이트에 대하여 브라우저의 설정을 확인하고 카메라와 마이크의 사용을 허용 하세요"
+
+msgid "Skip check"
+msgstr "확인 넘어가기"
+
+msgid "Click here for help (Google Chrome)."
+msgstr "도움말을 원하면 여기를 클릭 하세요 (구글 크롬)"
+
+msgid "Please set your user details and settings."
+msgstr "사용자의 세부상세와 설정을 지정하세요 "
+
+msgid "Enter a room name"
+msgstr ""
+
+msgid "Random room name"
+msgstr ""
+
+#, fuzzy
+msgid "Enter room"
+msgstr "현재 방"
+
+msgid ""
+"Enter the name of an existing room. You can create new rooms when you are"
+" signed in."
+msgstr ""
+
+msgid "Room history"
+msgstr ""
+
+msgid "Please sign in."
+msgstr ""
+
+msgid "Videos play simultaneously for everyone in this call."
+msgstr ""
+
+msgid "YouTube URL"
+msgstr ""
+
+msgid ""
+"Could not load YouTube player API, please check your network / firewall "
+"settings."
+msgstr ""
+
+msgid "Currently playing"
+msgstr ""
+
+msgid "YouTube controls"
+msgstr ""
+
+msgid "YouTube video to share"
+msgstr ""
+
+msgid "Peer to peer chat active."
+msgstr "일대일 대화 활성화"
+
+msgid "Peer to peer chat is now off."
+msgstr "일대일 대화 꺼짐"
+
+msgid " is now offline."
+msgstr " 현재 오프라인 상태"
+
+msgid " is now online."
+msgstr " 현재 온라인 상태"
+
+msgid "You share file:"
+msgstr "공유 화일:"
+
+msgid "Incoming file:"
+msgstr "도착하는 화일:"
+
+msgid "You shared your location:"
+msgstr ""
+
+msgid "Location received:"
+msgstr ""
+
+msgid "You accepted the contact request."
+msgstr ""
+
+msgid "You rejected the contact request."
+msgstr ""
+
+msgid "You sent a contact request."
+msgstr ""
+
+msgid "Your contact request was accepted."
+msgstr ""
+
+msgid "Incoming contact request."
+msgstr ""
+
+msgid "Your contact request was rejected."
+msgstr ""
+
+msgid "Edit Contact"
+msgstr ""
+
+msgid "Your browser does not support WebRTC. No calls possible."
+msgstr "브라우저가 WebRTC를 지원하지 않습니다. 전화걸기가 불가능 합니다."
+
+msgid "Close this window and disconnect?"
+msgstr ""
+
+msgid "Contacts Manager"
+msgstr ""
+
+msgid "Restart required to apply updates. Click ok to restart now."
+msgstr "업데이트를 적용하려면 재시작이 필요 합니다. 지금 재시작 하려면 ok를 클릭 하십시오"
+
+msgid "Failed to access camera/microphone."
+msgstr "카메라/마이크 사용 실패"
+
+msgid "Failed to establish peer connection."
+msgstr "상대연결 설정이 실패 하였습니다"
+
+msgid "We are sorry but something went wrong. Boo boo."
+msgstr "죄송합니다만 현재 문제가 있습니다."
+
+msgid "Oops"
+msgstr "이런"
+
+msgid "Peer connection failed. Check your settings."
+msgstr "상대연결이 실패 했습니다. 설정을 확인 하십시오"
+
+msgid "User hung up because of error."
+msgstr "오류로 인해 사용자 끊어짐"
+
+msgid " is busy. Try again later."
+msgstr " 통화중. 다시 시도 하세요."
+
+msgid " rejected your call."
+msgstr " 전화가 거부 되었습니다."
+
+msgid " does not pick up."
+msgstr " 전화를 받지 않습니다."
+
+#, fuzzy
+msgid " tried to call you"
+msgstr " 연결을 시도 중입니다"
+
+#, fuzzy
+msgid " called you"
+msgstr " 전화 드렸습니다."
+
+#, fuzzy
+msgid "Your browser is not supported. Please upgrade to a current version."
+msgstr "당신의 브라우저가 회일전송을 지원하지 않습니다."
+
+msgid "Chat with"
+msgstr "대화하기"
+
+msgid "Message from "
+msgstr "로 부터 메시지"
+
+#, python-format
+msgid "You are now in room %s ..."
+msgstr "당신은 현재 방%s ...에 있습니다"
+
+msgid "Your browser does not support file transfer."
+msgstr "당신의 브라우저가 회일전송을 지원하지 않습니다."
+
+msgid "Could not load PDF: Please make sure to select a PDF document."
+msgstr ""
+
+msgid "Could not load PDF: Missing PDF file."
+msgstr ""
+
+#, python-format
+msgid "An error occurred while loading the PDF (%s)."
+msgstr ""
+
+msgid "An unknown error occurred while loading the PDF."
+msgstr ""
+
+#, python-format
+msgid "An error occurred while loading the PDF page (%s)."
+msgstr ""
+
+msgid "An unknown error occurred while loading the PDF page."
+msgstr ""
+
+#, python-format
+msgid "An error occurred while rendering the PDF page (%s)."
+msgstr ""
+
+msgid "An unknown error occurred while rendering the PDF page."
+msgstr ""
+
+msgid "Only PDF documents and OpenDocument files can be shared at this time."
+msgstr ""
+
+#, python-format
+msgid "Failed to start screen sharing (%s)."
+msgstr ""
+
+msgid ""
+"Permission to start screen sharing was denied. Make sure to have enabled "
+"screen sharing access for your browser. Copy chrome://flags/#enable-"
+"usermedia-screen-capture and open it with your browser and enable the "
+"flag on top. Then restart the browser and you are ready to go."
+msgstr ""
+"화면공유가 거절되었습니다. 사용하시는 브라우저에서 화면공유를 가능하도록 하여 주십시오. chrome://flags/#enable-"
+"usermedia-screen-capture를 복사하여 브라우저에서 수행하시고 상단의 프래그를 가능으로 변경 하십시오. 브라우저를 "
+"다시 수행시키면 사용하실수 있습니다."
+
+msgid "Permission to start screen sharing was denied."
+msgstr ""
+
+msgid "Use browser language"
+msgstr "브라우저 언어 사용"
+
+msgid "Meet with me here:"
+msgstr "나를 여기서 만납니다:"
+
+#, fuzzy
+msgid "Room name"
+msgstr "사용자 이름"
+
+msgid ""
+"The request contains an invalid parameter value. Please check the URL of "
+"the video you want to share and try again."
+msgstr ""
+
+msgid ""
+"The requested content cannot be played in an HTML5 player or another "
+"error related to the HTML5 player has occurred. Please try again later."
+msgstr ""
+
+msgid ""
+"The video requested was not found. Please check the URL of the video you "
+"want to share and try again."
+msgstr ""
+
+msgid ""
+"The owner of the requested video does not allow it to be played in "
+"embedded players."
+msgstr ""
+
+#, python-format
+msgid ""
+"An unknown error occurred while playing back the video (%s). Please try "
+"again later."
+msgstr ""
+
+msgid ""
+"An unknown error occurred while playing back the video. Please try again "
+"later."
+msgstr ""
+
+msgid "Unknown URL format. Please make sure to enter a valid YouTube URL."
+msgstr ""
+
+msgid "Error"
+msgstr "오류"
+
+msgid "Hint"
+msgstr "도움말"
+
+msgid "Please confirm"
+msgstr "확인하십시오"
+
+msgid "More information required"
+msgstr "더 많은 정보가 필요함"
+
+msgid "Ok"
+msgstr "오케이"
+
+msgid ""
+"Screen sharing requires a browser extension. Please add the Spreed WebRTC"
+" screen sharing extension to Chrome and try again."
+msgstr ""
+
+msgid "Access code required"
+msgstr "접속코드 필요함"
+
+msgid "Access denied"
+msgstr "접속 거부"
+
+msgid "Please provide a valid access code."
+msgstr "유효한 접속코드가 필요합니다."
+
+msgid ""
+"Failed to verify access code. Check your Internet connection and try "
+"again."
+msgstr "접속코드 확인이 실패 했습니다. 인터넷 연결을 확인하고 다시 시도해 주십시오. "
+
+#, python-format
+msgid "PIN for room %s is now '%s'."
+msgstr ""
+
+#, python-format
+msgid "PIN lock has been removed from room %s."
+msgstr ""
+
+#, python-format
+msgid "Enter the PIN for room %s"
+msgstr ""
+
+msgid "Please sign in to create rooms."
+msgstr ""
+
+#, fuzzy, python-format
+msgid "and %s"
+msgstr "그리고 %2$s"
+
+#, python-format
+msgid "and %d others"
+msgstr ""
+
+msgid "User"
+msgstr "사용자"
+
+msgid "Someone"
+msgstr "어떤 사람"
+
+msgid "Me"
+msgstr "나"
+

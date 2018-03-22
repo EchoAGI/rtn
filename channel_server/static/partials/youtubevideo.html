@@ -1,0 +1,66 @@
+<div class="youtubevideo">
+	<div class="youtubevideopane nicescroll">
+		<form class="container-fluid form" role="form">
+
+			<div class="welcome container-fluid" ng-show="!playbackActive && youtubeAPIReady">
+				<h1>{{_('Share a YouTube video')}}</h1>
+				<div class="welcome-container">
+					<p>{{_("Videos play simultaneously for everyone in this call.")}}</p>
+					<div class="form-group welcome-input">
+						<input type="text" class="form-control input-lg" ng-model="youtubeurl" placeholder="{{_('YouTube URL')}}">
+						<div class="welcome-input-buttons">
+					  		<button class="btn btn-primary" type="button" ng-disabled="!youtubeurl" ng-click="shareVideo(youtubeurl)">{{_("Share")}}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="welcome container-fluid" ng-show="!youtubeAPIReady">
+				<h1>{{_('Share a YouTube video')}}</h1>
+				<div class="welcome-container">
+					<div>
+					  <p>{{_("Could not load YouTube player API, please check your network / firewall settings.")}}</p>
+					  <p ng-if="currentVideoUrl">{{_('Currently playing')}}<br><a href="{{ currentVideoUrl }}" rel="external" target="_blank">{{ currentVideoUrl }}</a></p>
+					  <p class="form-group welcome-input">
+						<button class="btn btn-primary btn-lg" type="button" ng-click="loadYouTubeAPI()">{{_("Retry")}}</button>
+					  </p>
+					</div>
+				</div>
+			</div>
+
+			<div ng-show="playbackActive">
+				<div class="row youtubecontainer">
+					<div class="embed-responsive embed-responsive-16by9 youtubeplayercontainer"></div>
+					<div class="youtubeplayerinfo">
+						<div>{{_('Currently playing')}}<br><a href="{{ currentVideoUrl }}" rel="external" target="_blank">{{ currentVideoUrl }}</a></div>
+					</div>
+					<div class="click-container" ng-show="!isPublisher">
+						<div class="volumecontrol">
+							<button class="btn volume-button" ng-class="{'active': volumebarVisible}" ng-click="volumebarVisible=!volumebarVisible"><i class="fa fa-volume-up" ng-class="{'fa-volume-up': volume &gt;= 60, 'fa-volume-down': volume &lt; 60}"></i></button>
+							<div ng-show="volumebarVisible" class="volumebar">
+								<input type="range" class="bar" min="0" max="100" step="1" ng-model="volume" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="overlaybar form-horizontal" ng-if="youtubeAPIReady" ng-class="{notvisible: hideControlsBar}">
+		<a class="overlaybar-button" ng-model="hideControlsBar" btn-checkbox btn-checkbox btn-checkbox-true="0" btn-checkbox-false="1" title="{{_('YouTube controls')}}"><i class="fa fa-cogs"></i></a>
+		<div class="overlaybar-content">
+			<form class="container-fluid" role="form">
+				<div class="form-group">
+					<label>{{_('YouTube video to share')}}</label>
+					<div class="overlaybar-input">
+						<input type="text" class="form-control input-lg" ng-disabled="!youtubeAPIReady" ng-model="youtubeurl" required placeholder="{{_('YouTube URL')}}">
+						<div class="overlaybar-buttons">
+							<button type="button" class="btn btn-primary" ng-click="shareVideo(youtubeurl)" ng-disabled="youtubeurl === ''">{{_('Share')}}</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

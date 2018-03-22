@@ -1,0 +1,192 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+@import 'compass/utilities/color/contrast';
+
+// general
+$background: #e5e5e5 !default;
+$componentbg: #f8f8f8 !default;
+$componentfg1: #262626 !default;
+$componentfg2: rgba(0, 0, 0, .5) !default;
+$componentfg3: rgba(0, 0, 0, .2) !default;
+$componentfg4: #737373 !default;
+$sidepanebg: #fff !default;
+$bordercolor: #e7e7e7 !default;
+$actioncolor1: rgb(132, 184, 25) !default;
+$actioncolor2: rgb(0, 149, 52) !default;
+$specialbg1: $background;
+
+// branding
+$logo: url('../img/logo-small.png') !default;
+$scalable-logo: url('../img/logo.svg') !default;
+$load-logo: $scalable-logo !default;
+
+// background
+$main-background-image: '../img/bg-tiles.jpg' !default;
+$main-background-image-retina: '../img/bg-tiles_x2.jpg' !default;
+$main-background: url($main-background-image) !default;
+$main-background-retina: url($main-background-image-retina) !default;
+
+// general action based colors
+$action-hover: rgba(0, 0, 0, .4) !default;
+$action-mute: rgb(219, 79, 57) !default;
+$action-enable: $actioncolor1 !default;
+
+// base
+$welcome: #aaa !default;
+$loading: #ddd !default;
+
+// font
+$font-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$base-font-size: 13px; // compass vertical_rhythm mixin
+$base-line-height: 20px; // compass vertical_rhythm mixin
+$font-color: lighten(#000, 20%) !default;
+$font-color-accent: lighten($font-color, 50%) !default;
+
+// audio video
+$audiovideolevel: $action-enable !default;
+
+//audiolevel
+$audiolevel-top: 43px !default;
+
+// main navigation bar
+$minbarheight: 51px !default;
+$bar-background: $componentbg;
+$bar-logo-text-desc: rgb(34, 34, 34) !default;
+$bar-btn-action-border: $bordercolor !default;
+$bar-btn-action-color: #333 !default;
+$bar-btn-action-hover: #666 !default;
+$bar-btn-action-mute: $action-mute !default;
+$bar-btn-action-enable: $action-enable !default;
+$bar-btn-action-normal: #e9e9e9 !default;
+$bar-btn-action-normal-border: #e2e2e2 !default;
+
+// overlaybar
+$overlaybar-background: $componentfg3;
+$overlaybar-color: $bordercolor !default;
+$overlaybar-btn: $bordercolor !default;
+
+// video
+$video-background: rgba(0, 0, 0, .4) !default;
+$video-onlyaudio-background: #666 !default;
+$video-onlyaudio: rgba(255, 255, 255, .3) !default;
+$video-overlayactions: rgba(0, 0, 0, .9) !default;
+
+// settings
+$settings-background: #fff !default;
+
+// buddylist
+$buddylist-width: 300px !default;
+$buddylist-background: $componentbg !default;
+$buddylist-tab-color: rgba(0, 0, 0, .3) !default;
+$buddylist-tab-background: $componentbg !default;
+$buddylist-action-background: rgba(255, 255, 255, .5) !default;
+$buddylist-buddy1: $componentfg1 !default;
+$buddylist-buddy2: $componentfg2 !default;
+$buddylist-action-font-size: 1.6em;
+
+// chat
+$chat-width: 300px !default;
+$chat-background: $specialbg1 !default;
+$chat-header: rgba(255, 255, 255, .9) !default;
+$chat-disabled: #aaa !default;
+$chat-badge: #84b819 !default;
+$chat-ctrl: rgba(0, 0, 0, .3) !default;
+$chat-meta: #666 !default;
+$chat-msg-background: #fff !default;
+$chat-msg-border: transparent !default;
+$chat-msg-shadow: rgba(0, 0, 0, .03) !default;
+$chat-arrow-border: #fff;
+
+$chat-msg-default-icon-color: #ccc !default;
+$chat-msg-unread-icon-color: #fe9a2e !default;
+$chat-msg-sending-icon-color: $chat-msg-default-icon-color !default;
+$chat-msg-sent-icon-color: #5882fa !default;
+$chat-msg-delivered-icon-color: #5882fa !default;
+$chat-msg-received-icon-color: #84b819 !default;
+$chat-msg-read-icon-color: $chat-msg-default-icon-color !default;
+
+$chat-msg-unread-icon: '\f0eb' !default;
+$chat-msg-sending-icon: '\f0ec' !default;
+$chat-msg-sent-icon: '\f003' !default;
+$chat-msg-delivered-icon: '\f019' !default;
+$chat-msg-received-icon: '\f06e' !default;
+$chat-msg-read-icon: '\f00c' !default;
+
+$chat-msg-self-background: #fff !default;
+$chat-msg-self-color: $font-color !default;
+$chat-msg-remote-background: #fff !default;
+$chat-msg-remote-color: $font-color !default;
+
+$chat-bottom-background: transparent !default;
+$chat-typing: $chat-meta !default;
+$chat-input-border-color: #66afe9 !default;
+
+// fileinfo
+$fileinfo-background: #fff !default;
+$fileinfo-border: #ddd !default;
+$fileinfo-icon-background-color: #eee !default;
+$fileinfo-downloading-size-border: #ddd !default;
+$fileinfo-background-remote: $fileinfo-background !default;
+$fileinfo-border-remote: $fileinfo-border !default;
+$fileinfo-icon-background-color-remote: $fileinfo-icon-background-color !default;
+
+// settings
+$settings-version: #ccc !default;
+$form-help-text: #737373 !default;
+$settings-background: #fff !default;
+
+// social
+$social-email-color: #aaa !default;
+$social-facebook-color: #45619d !default;
+$social-google-color: #dd4b39 !default;
+$social-twitter-color: #00aced !default;
+$social-xing-color: #fff !default;
+
+// useability
+$breakpoint-useability-small: 400px !default;
+$breakpoint-useability-large: 1020px !default;
+
+// breakpoints
+$breakpoint-small: 480px !default;
+$breakpoint-medium: 700px !default;
+$breakpoint-large: 1280px !default;
+$breakpoint-video-small: 590px !default;
+$breakpoint-video-medium: 630px !default;
+$breakpoint-chat-small: 210px !default;
+$breakpoint-settings-medium: 800px !default;
+
+// touch specific
+$tap-highlight: rgba(0, 0, 0, 0) !default;
+
+// Fontawsome targeted variables
+$fa-css-prefix: fa !default;
+
+// Bootstrap changed variables
+$body-bg: $background !default;
+
+$font-family-sans-serif: $font-sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: $base-font-size !default;
+$text-color: $font-color !default;
+$dialog-header-neutral: #eee !default;
+
+$line-height-base: $base-line-height / $font-size-base;

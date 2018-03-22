@@ -1,0 +1,124 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#page { // scss-lint:disable IdSelector
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $minbarheight;
+}
+
+.welcome {
+  color: $welcome;
+  font-size: 1.1em;
+  margin-top: 80px;
+  max-width: 600px;
+  min-height: 160px;
+  padding-left: 105px;
+  padding-right: 0;
+  position: relative;
+  text-shadow: 0 0 5px #000;
+
+  @include breakpt($breakpoint-medium) {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  h1 {
+    margin-top: 0;
+    white-space: nowrap;
+
+    @include breakpt($breakpoint-medium) {
+      white-space: normal;
+    }
+  }
+
+  .welcome-container {
+    margin: 0 auto;
+  }
+
+  .welcome-logo {
+    background: $scalable-logo no-repeat left top;
+    background-size: contain;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 90px;
+
+    @include breakpt($breakpoint-medium) {
+      height: 70px;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      position: relative;
+      width: 70px;
+    }
+  }
+
+  .welcome-input {
+    position: relative;
+
+    input {
+      padding-right: 105px;
+    }
+  }
+
+  .welcome-input-buttons {
+    position: absolute;
+    right: 8px;
+    text-shadow: none;
+    top: 6px;
+
+    a {
+      color: #000;
+      padding-right: .5em;
+      user-select: none;
+    }
+  }
+
+  .room-link {
+    margin-top: -10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    a {
+      color: $welcome;
+    }
+  }
+
+  .rooms-history {
+    margin-top: 3em;
+
+    a {
+      display: inline-block;
+      margin-right: .5em;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+  }
+
+}

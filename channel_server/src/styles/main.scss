@@ -1,0 +1,56 @@
+/*!
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+// must set custom compass variables before import of compass
+@import 'global/variables';
+@import 'compass';
+@import 'libs/libs';
+
+@import 'global/mixins';
+
+@import 'global/base';
+@import 'global/loader';
+@import 'global/views';
+@import 'global/pages';
+@import 'global/nicescroll';
+@import 'global/animations';
+@import 'global/overlaybar';
+@import 'global/withs';
+
+@import 'components/rightslide';
+@import 'components/bar';
+@import 'components/buddylist';
+@import 'components/buddypicturecapture';
+@import 'components/buddypictureupload';
+@import 'components/settings';
+@import 'components/chat';
+@import 'components/usability';
+@import 'components/audiolevel';
+@import 'components/fileinfo';
+@import 'components/audiovideo';
+@import 'components/screenshare';
+@import 'components/roombar';
+@import 'components/social';
+@import 'components/contactsmanager';
+@import 'components/presentation';
+@import 'components/youtubevideo';
+
+@import 'shame';

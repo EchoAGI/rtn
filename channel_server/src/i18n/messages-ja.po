@@ -1,0 +1,844 @@
+# Japanese translations for Spreed WebRTC.
+# Copyright (C) 2014 struktur AG
+# This file is distributed under the same license as the Spreed WebRTC
+# project.
+# Curt Frisemo <curt.frisemo@spreed.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Spreed WebRTC 1.0\n"
+"Report-Msgid-Bugs-To: simon@struktur.de\n"
+"POT-Creation-Date: 2016-02-17 14:15+0100\n"
+"PO-Revision-Date: 2014-04-23 22:25+0100\n"
+"Last-Translator: Curt Frisemo <curt.frisemo@spreed.com>\n"
+"Language-Team: Curt Frisemo <curt.frisemo@spreed.com>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+msgid "Standard view"
+msgstr ""
+
+msgid "Large view"
+msgstr ""
+
+msgid "Kiosk view"
+msgstr ""
+
+msgid "Auditorium"
+msgstr ""
+
+msgid "Start chat"
+msgstr "チャットを始める"
+
+msgid "Start video call"
+msgstr "テレビ電話を始める"
+
+msgid "Start audio conference"
+msgstr "音声会議を始める"
+
+msgid "No one else here"
+msgstr ""
+
+msgid "Take"
+msgstr ""
+
+msgid "Retake"
+msgstr ""
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Set as Profile Picture"
+msgstr ""
+
+msgid "Take picture"
+msgstr "写真を取る"
+
+#, fuzzy
+msgid "Upload picture"
+msgstr "あなたの写真"
+
+msgid "Waiting for camera"
+msgstr "カメラ待ち"
+
+#, fuzzy
+msgid "Picture"
+msgstr "あなたの写真"
+
+msgid "The file couldn't be read."
+msgstr ""
+
+msgid "The file is not an image."
+msgstr ""
+
+#, python-format
+msgid "The file is too large. Max. %d MB."
+msgstr ""
+
+msgid "Select file"
+msgstr ""
+
+msgid "Chat sessions"
+msgstr "チャットのセッション"
+
+msgid "Room chat"
+msgstr "ルームチャット"
+
+msgid "Peer to peer"
+msgstr "ピア・ツー・ピア"
+
+msgid "Close chat"
+msgstr "チャットを終える"
+
+#, fuzzy
+msgid "Upload files"
+msgstr "ダウンロード失敗."
+
+msgid "Share my location"
+msgstr ""
+
+#, fuzzy
+msgid "Clear chat"
+msgstr "チャットを始める"
+
+msgid "is typing..."
+msgstr "は入力中です..."
+
+msgid "has stopped typing..."
+msgstr "は入力を止めました..."
+
+msgid "Type here to chat..."
+msgstr "ここに入力してチャット開始します..."
+
+msgid "Send"
+msgstr "送信"
+
+msgid "Accept"
+msgstr ""
+
+msgid "Reject"
+msgstr "拒否"
+
+msgid "You have no contacts."
+msgstr ""
+
+msgid ""
+"To add new contacts, join a room and create a contact add request by "
+"clicking on the star icon next to a user entry."
+msgstr ""
+
+msgid "Edit contact"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Remove"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "File sharing"
+msgstr "ファイル共有"
+
+msgid "File is no longer available"
+msgstr "ファイルは有効ではありません"
+
+msgid "Download"
+msgstr "ダウンロード"
+
+msgid "Open"
+msgstr "開く"
+
+msgid "Unshare"
+msgstr "共有取り消し"
+
+msgid "Retry"
+msgstr "リトライ"
+
+msgid "Download failed."
+msgstr "ダウンロード失敗."
+
+msgid "Share a YouTube video"
+msgstr ""
+
+msgid "Share a file as presentation"
+msgstr ""
+
+msgid "Share your screen"
+msgstr "画面を共有する."
+
+msgid "Chat"
+msgstr "チャット"
+
+msgid "Contacts"
+msgstr ""
+
+msgid "Mute microphone"
+msgstr "消音"
+
+msgid "Turn camera off"
+msgstr "カメラをオフにする"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Loading presentation ..."
+msgstr ""
+
+msgid "Please upload a document"
+msgstr ""
+
+msgid ""
+"Documents are shared with everyone in this call. The supported file types"
+" are PDF and OpenDocument files."
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "You can drag files here too."
+msgstr ""
+
+msgid "Presentation controls"
+msgstr ""
+
+msgid "Prev"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Change room"
+msgstr "ルームチェンジ"
+
+msgid "Room"
+msgstr "ルーム"
+
+msgid "Leave room"
+msgstr "ルームを出る"
+
+msgid "Main"
+msgstr "メイン"
+
+msgid "Current room"
+msgstr "現在のルーム"
+
+msgid "Screen sharing options"
+msgstr "画面共有オプション"
+
+msgid "Fit screen."
+msgstr "画面に合わせる"
+
+#, fuzzy
+msgid "Share screen"
+msgstr "画面を共有する."
+
+msgid "Please select what to share."
+msgstr ""
+
+#, fuzzy
+msgid "Screen"
+msgstr "画面に合わせる"
+
+msgid "Window"
+msgstr ""
+
+msgid "Application"
+msgstr ""
+
+msgid "Share the whole screen. Click share to select the screen."
+msgstr ""
+
+msgid "Share a single window. Click share to select the window."
+msgstr ""
+
+msgid ""
+"Share all windows of a application. This can leak content behind windows "
+"when windows get moved. Click share to select the application."
+msgstr ""
+
+#, fuzzy
+msgid "Share"
+msgstr "共有取り消し"
+
+msgid "OK"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Your name"
+msgstr "あなたの名前"
+
+msgid "Your picture"
+msgstr "あなたの写真"
+
+msgid "Status message"
+msgstr ""
+
+msgid "What's on your mind?"
+msgstr ""
+
+msgid ""
+"Your picture, name and status message identify yourself in calls, chats "
+"and rooms."
+msgstr ""
+
+msgid "Your ID"
+msgstr ""
+
+msgid "Register"
+msgstr ""
+
+msgid ""
+"Authenticated by certificate. To log out you have to remove your "
+"certificate from the browser."
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "Create an account"
+msgstr ""
+
+msgid "Sign out"
+msgstr ""
+
+msgid "Manage account"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Microphone"
+msgstr "マイク"
+
+msgid "Camera"
+msgstr "カメラ"
+
+msgid "Video quality"
+msgstr "ビデオ画質"
+
+msgid "Low"
+msgstr "低い"
+
+msgid "High"
+msgstr "高い"
+
+msgid "HD"
+msgstr "HD"
+
+msgid "Full HD"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Language changes become active on reload."
+msgstr "言語の変更は再読み込み時に適用となります."
+
+msgid "Default room"
+msgstr "デフォルト・ルーム"
+
+msgid "Set alternative room to join at start."
+msgstr "スタート時に別のルームに参加する."
+
+#, fuzzy
+msgid "Notifications"
+msgstr "デスクトップ通知"
+
+msgid "Desktop notification"
+msgstr "デスクトップ通知"
+
+msgid "Enable"
+msgstr "有効にする"
+
+msgid "Denied - check your browser settings"
+msgstr "拒否 - ブラウザ設定を確認して下さい"
+
+msgid "Allowed"
+msgstr "許可"
+
+msgid "Sounds for incoming messages"
+msgstr ""
+
+#, fuzzy
+msgid "Ring on incoming calls"
+msgstr "着信中"
+
+msgid "Sounds for users in current room"
+msgstr ""
+
+msgid "Advanced settings"
+msgstr "詳細設定"
+
+msgid "Play audio on same device as selected microphone"
+msgstr ""
+
+msgid "Experimental AEC"
+msgstr ""
+
+msgid "Experimental AGC"
+msgstr ""
+
+msgid "Experimental noise suppression"
+msgstr ""
+
+msgid "Max video frame rate"
+msgstr "ビデオ最高フレームレート"
+
+msgid "auto"
+msgstr "自動"
+
+#, fuzzy
+msgid "Send stereo audio"
+msgstr "ステレオ・オーディオ"
+
+msgid ""
+"Sending stereo audio disables echo cancellation. Enable only if you have "
+"stereo input."
+msgstr ""
+
+msgid "Detect CPU over use"
+msgstr ""
+
+msgid "Automatically reduces video quality as needed."
+msgstr ""
+
+msgid "Optimize for high resolution video"
+msgstr ""
+
+msgid "Reduce video noise"
+msgstr ""
+
+msgid "Prefer VP9 video codec"
+msgstr ""
+
+msgid "Enable experiments"
+msgstr ""
+
+msgid "Show advanced settings"
+msgstr "詳細設定を表示"
+
+msgid "Hide advanced settings"
+msgstr "詳細設定を隠す"
+
+msgid "Remember settings"
+msgstr "設定を保存"
+
+msgid ""
+"Your ID will still be kept - press the log out button above to delete the"
+" ID."
+msgstr ""
+
+msgid "Room link"
+msgstr ""
+
+#, fuzzy
+msgid "Invite by Email"
+msgstr "Eメールでシェア"
+
+msgid "Invite with Facebook"
+msgstr ""
+
+msgid "Invite with Twitter"
+msgstr ""
+
+msgid "Invite with Google Plus"
+msgstr ""
+
+msgid "Invite with XING"
+msgstr ""
+
+msgid "Initializing"
+msgstr "初期化中"
+
+msgid "Online"
+msgstr "オンライン"
+
+msgid "Calling"
+msgstr "発信中"
+
+msgid "Hangup"
+msgstr "切断"
+
+msgid "In call with"
+msgstr "と会話中"
+
+msgid "Conference with"
+msgstr "と会議中"
+
+msgid "Your are offline"
+msgstr "オフラインです"
+
+msgid "Go online"
+msgstr "オンラインにする"
+
+msgid "Connection interrupted"
+msgstr "接続は中断されました"
+
+msgid "An error occured"
+msgstr "エラーが発生しました"
+
+msgid "Incoming call"
+msgstr "着信中"
+
+msgid "from"
+msgstr "から"
+
+msgid "Accept call"
+msgstr "通話"
+
+msgid "Waiting for camera/microphone access"
+msgstr "カメラ・マイクの接続待ち."
+
+msgid "Your audio level"
+msgstr "あなたの音量"
+
+msgid "Checking camera and microphone access."
+msgstr "カメラ・マイクの接続確認中."
+
+msgid "Please allow access to your camera and microphone."
+msgstr "カメラとマイクの接続を許可してください."
+
+msgid "Camera / microphone access required."
+msgstr "カメラ・マイクの接続が必要です."
+
+msgid ""
+"Please check your browser settings and allow camera and microphone access"
+" for this site."
+msgstr "ブラウザ設定で、このサイトへのカメラ・マイクの接続を許可してください."
+
+msgid "Skip check"
+msgstr "チェックをスキップ"
+
+msgid "Click here for help (Google Chrome)."
+msgstr "ここをクリックしてヘルプ表示(Google Chrome)"
+
+msgid "Please set your user details and settings."
+msgstr "あなたのプロフィールとアプリの動作を設定してください."
+
+msgid "Enter a room name"
+msgstr ""
+
+msgid "Random room name"
+msgstr ""
+
+#, fuzzy
+msgid "Enter room"
+msgstr "現在のルーム"
+
+msgid ""
+"Enter the name of an existing room. You can create new rooms when you are"
+" signed in."
+msgstr ""
+
+msgid "Room history"
+msgstr ""
+
+msgid "Please sign in."
+msgstr ""
+
+msgid "Videos play simultaneously for everyone in this call."
+msgstr ""
+
+msgid "YouTube URL"
+msgstr ""
+
+msgid ""
+"Could not load YouTube player API, please check your network / firewall "
+"settings."
+msgstr ""
+
+msgid "Currently playing"
+msgstr ""
+
+msgid "YouTube controls"
+msgstr ""
+
+msgid "YouTube video to share"
+msgstr ""
+
+msgid "Peer to peer chat active."
+msgstr "ピア・ツー・ピア・チャットがアクティブです."
+
+msgid "Peer to peer chat is now off."
+msgstr "ピア・ツー・ピア・チャットがオフです."
+
+msgid " is now offline."
+msgstr " は今オフラインです"
+
+msgid " is now online."
+msgstr " は今オンラインです"
+
+msgid "You share file:"
+msgstr "あなたの共有ファイル:"
+
+msgid "Incoming file:"
+msgstr "受信中ファイル:"
+
+msgid "You shared your location:"
+msgstr ""
+
+msgid "Location received:"
+msgstr ""
+
+msgid "You accepted the contact request."
+msgstr ""
+
+msgid "You rejected the contact request."
+msgstr ""
+
+msgid "You sent a contact request."
+msgstr ""
+
+msgid "Your contact request was accepted."
+msgstr ""
+
+msgid "Incoming contact request."
+msgstr ""
+
+msgid "Your contact request was rejected."
+msgstr ""
+
+msgid "Edit Contact"
+msgstr ""
+
+msgid "Your browser does not support WebRTC. No calls possible."
+msgstr "ブラウザがWebRTCをサポートしていない為通話はできません."
+
+msgid "Close this window and disconnect?"
+msgstr ""
+
+msgid "Contacts Manager"
+msgstr ""
+
+msgid "Restart required to apply updates. Click ok to restart now."
+msgstr "アップデート適用のため再起動してください.ここをクリックして再起動する."
+
+msgid "Failed to access camera/microphone."
+msgstr "カメラ・マイクへの接続に失敗しました."
+
+msgid "Failed to establish peer connection."
+msgstr "ピアとの接続に失敗しました."
+
+msgid "We are sorry but something went wrong. Boo boo."
+msgstr "申し訳ないのですが、不具合が生じました。"
+
+msgid "Oops"
+msgstr "しまった"
+
+msgid "Peer connection failed. Check your settings."
+msgstr "ピア接続に失敗しました.設定を確認してください."
+
+msgid "User hung up because of error."
+msgstr "エラーのため切断しました."
+
+msgid " is busy. Try again later."
+msgstr " は話中です.後で掛けなおしてください."
+
+msgid " rejected your call."
+msgstr " 着信拒否されました."
+
+msgid " does not pick up."
+msgstr " は電話にでません."
+
+#, fuzzy
+msgid " tried to call you"
+msgstr " は電話しようとしました."
+
+#, fuzzy
+msgid " called you"
+msgstr " から電話がありました."
+
+#, fuzzy
+msgid "Your browser is not supported. Please upgrade to a current version."
+msgstr "ブラウザがファイル転送をサポートしていません."
+
+msgid "Chat with"
+msgstr "とチャットする"
+
+msgid "Message from "
+msgstr "からのメッセージ"
+
+#, python-format
+msgid "You are now in room %s ..."
+msgstr "あなたは%sのルームにいます..."
+
+msgid "Your browser does not support file transfer."
+msgstr "ブラウザがファイル転送をサポートしていません."
+
+msgid "Could not load PDF: Please make sure to select a PDF document."
+msgstr ""
+
+msgid "Could not load PDF: Missing PDF file."
+msgstr ""
+
+#, python-format
+msgid "An error occurred while loading the PDF (%s)."
+msgstr ""
+
+msgid "An unknown error occurred while loading the PDF."
+msgstr ""
+
+#, python-format
+msgid "An error occurred while loading the PDF page (%s)."
+msgstr ""
+
+msgid "An unknown error occurred while loading the PDF page."
+msgstr ""
+
+#, python-format
+msgid "An error occurred while rendering the PDF page (%s)."
+msgstr ""
+
+msgid "An unknown error occurred while rendering the PDF page."
+msgstr ""
+
+msgid "Only PDF documents and OpenDocument files can be shared at this time."
+msgstr ""
+
+#, python-format
+msgid "Failed to start screen sharing (%s)."
+msgstr ""
+
+msgid ""
+"Permission to start screen sharing was denied. Make sure to have enabled "
+"screen sharing access for your browser. Copy chrome://flags/#enable-"
+"usermedia-screen-capture and open it with your browser and enable the "
+"flag on top. Then restart the browser and you are ready to go."
+msgstr ""
+"画面共有は拒否されました.ブラウザの画面共有の設定を確認して下さい. Chromeのアドレスバーに chrome://flags/#enable-"
+"usermedia-screen-capture "
+"を入力して開き、スクリーンキャプチャのサポートを有効にしてください。その後ブラウザを再起動してください。"
+
+msgid "Permission to start screen sharing was denied."
+msgstr ""
+
+msgid "Use browser language"
+msgstr "ブラウザの言語を使用"
+
+msgid "Meet with me here:"
+msgstr "ここで私と会う:"
+
+#, fuzzy
+msgid "Room name"
+msgstr "あなたの名前"
+
+msgid ""
+"The request contains an invalid parameter value. Please check the URL of "
+"the video you want to share and try again."
+msgstr ""
+
+msgid ""
+"The requested content cannot be played in an HTML5 player or another "
+"error related to the HTML5 player has occurred. Please try again later."
+msgstr ""
+
+msgid ""
+"The video requested was not found. Please check the URL of the video you "
+"want to share and try again."
+msgstr ""
+
+msgid ""
+"The owner of the requested video does not allow it to be played in "
+"embedded players."
+msgstr ""
+
+#, python-format
+msgid ""
+"An unknown error occurred while playing back the video (%s). Please try "
+"again later."
+msgstr ""
+
+msgid ""
+"An unknown error occurred while playing back the video. Please try again "
+"later."
+msgstr ""
+
+msgid "Unknown URL format. Please make sure to enter a valid YouTube URL."
+msgstr ""
+
+msgid "Error"
+msgstr "エラー"
+
+msgid "Hint"
+msgstr "ヒント"
+
+msgid "Please confirm"
+msgstr "確認して下さい"
+
+msgid "More information required"
+msgstr "さらなる情報が必要です"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid ""
+"Screen sharing requires a browser extension. Please add the Spreed WebRTC"
+" screen sharing extension to Chrome and try again."
+msgstr ""
+
+msgid "Access code required"
+msgstr "アクセスコードが必要です"
+
+msgid "Access denied"
+msgstr "アクセスが拒否されました"
+
+msgid "Please provide a valid access code."
+msgstr "有効なアクセスコードを入力してください."
+
+msgid ""
+"Failed to verify access code. Check your Internet connection and try "
+"again."
+msgstr "アクセスコードの確認に失敗しました.インターネット接続を確認してリトライしてください."
+
+#, python-format
+msgid "PIN for room %s is now '%s'."
+msgstr ""
+
+#, python-format
+msgid "PIN lock has been removed from room %s."
+msgstr ""
+
+#, python-format
+msgid "Enter the PIN for room %s"
+msgstr ""
+
+msgid "Please sign in to create rooms."
+msgstr ""
+
+#, fuzzy, python-format
+msgid "and %s"
+msgstr "と %2"
+
+#, python-format
+msgid "and %d others"
+msgstr ""
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "Someone"
+msgstr "誰か"
+
+msgid "Me"
+msgstr "私"
+

@@ -1,0 +1,61 @@
+<div class="presentation">
+	<div class="presentationpane nicescroll">
+		<div class="welcome container-fluid" ng-show="loading || (!currentPresentation && activeDownloads.length)">
+			<h1>{{_('Loading presentation ...')}}</h1>
+			<div class="progress" ng-repeat="download in activeDownloads | orderBy: 'sortkey'">
+				<span class="download-info">{{download.info.name}} ({{download.info.size|humanizeFilesize}} / {{download.progress}}%)</span>
+				<div class="progress-bar progress-bar-success" ng-style="{'width': download.progress+'%'}"></div>
+			</div>
+		</div>
+		<div class="welcome container-fluid" ng-hide="currentPresentation || loading">
+			<h1>{{_('Please upload a document')}}</h1>
+			<div>
+				<p>{{_('Documents are shared with everyone in this call. The supported file types are PDF and OpenDocument files.')}}</p>
+				<p><button class="btn btn-lg btn-primary">{{_('Upload')}}</button></p>
+				<p>{{_('You can drag files here too.')}}</p>
+			</div>
+		</div>
+		<div class="canvasContainer" ng-if="currentPresentation" ng-hide="loading" ng-switch="currentPresentation.type">
+			<pdfcanvas ng-switch-when="pdf" />
+			<odfcanvas ng-switch-when="odf" />
+		</div>
+	</div>
+	<div class="overlaybar form-horizontal" ng-class="{notvisible: hideControlsBar}">
+		<a class="overlaybar-button" ng-model="hideControlsBar" btn-checkbox btn-checkbox btn-checkbox-true="0" btn-checkbox-false="1" title="{{_('Presentation controls')}}"><i class="fa fa-cogs"></i></a>
+		<div class="overlaybar-content">
+			<div class="pagecontrol" ng-show="currentPresentation || availablePresentations.length">
+				<div class="clearfix" ng-show="currentPresentation && maxPageNumber &gt; 1">
+					<a class="overlaybar-button btn-prev" ng-click="prevPage()" ng-show="currentPageNumber &gt; 1" title="{{_('Prev')}}"><i class="fa fa-backward"></i></a>
+					<div class="pageinfo center-block"><input class="form-control input-sm" type="number" ng-model="currentPageNumber" /> / {{ maxPageNumber }}</div>
+					<a class="overlaybar-button btn-next" ng-click="nextPage()" ng-show="currentPageNumber &lt; maxPageNumber" title="{{_('Next')}}"><i class="fa fa-forward"></i></a>
+				</div>
+			</div>
+			<div class="presentations nicescroll" ng-show="availablePresentations.length">
+				<div class="thumbnail">
+					<div class="fa filetype fa-plus"></div>
+					<div class="caption">
+						<button class="btn btn-primary">{{_('Upload')}}</button>
+					</div>
+				</div>
+				<div class="thumbnail" ng-repeat="presentation in availablePresentations | orderBy : 'sortkey'"
+									   ng-class="{'presentable': presentation.presentable}"
+									   ng-click="selectPresentation(presentation)"
+									   title="{{ presentation.info.name }}">
+					<div class="fa active fa-check" ng-show="presentation === currentPresentation"></div>
+					<div class="fa notavailable fa-ban" ng-show="presentation !== currentPresentation && !presentation.presentable"></div>
+					<a class="btn btn-primary presentation-action download" ng-show="presentation.uploaded || !presentation.downloading" ng-click="downloadPresentation(presentation, $event)"><i class="fa fa-download fa-lg"></i></a>
+					<a class="btn btn-danger presentation-action delete" ng-show="presentation.uploaded" ng-click="deletePresentation(presentation, $event)"><i class="fa fa-trash-o fa-lg"></i></a>
+					<div class="fa filetype fa-file-pdf-o"></div>
+					<div class="caption">
+						<span class="name">{{ presentation.info.name }}</span><br>
+						<span ng-show="!presentation.downloading" class="size">{{ presentation.info.size|humanizeFilesize }}</span>
+						<div ng-show="presentation.downloading" class="progress">
+							<span class="download-info">{{presentation.info.size|humanizeFilesize}} / {{presentation.progress}}%</span>
+							<div class="progress-bar progress-bar-success" ng-style="{'width': presentation.progress+'%'}"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,320 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#buddylist { // scss-lint:disable IdSelector
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $buddylist-width + 25;
+  z-index: 50;
+}
+
+#buddylist:before { // scss-lint:disable IdSelector
+  background: $buddylist-tab-background;
+  border-bottom: 1px solid $bordercolor;
+  border-bottom-left-radius: 6px;
+  border-left: 1px solid $bordercolor;
+  border-top: 1px solid $bordercolor;
+  border-top-left-radius: 6px;
+  bottom: 0;
+  color: $buddylist-tab-color;
+  content: '\f100';
+  cursor: pointer;
+  display: none;
+  font-family: FontAwesome;
+  font-size: 1.8em;
+  height: 55px;
+  left: 0;
+  line-height: 55px;
+  margin: auto;
+  padding-right: 4px;
+  pointer-events: auto;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 26px;
+  z-index: 1;
+}
+
+.withBuddylist #buddylist:before { // scss-lint:disable IdSelector
+  content: '\f101';
+  padding-right: 0;
+  @include breakpt($breakpoint-medium, max-width) {
+    display: block;
+  }
+}
+
+.withBuddylistAutoHide #buddylist:before { // scss-lint:disable IdSelector
+  display: block;
+}
+
+.buddylist {
+  background: $buddylist-background;
+  //border-top: 1px solid $bordercolor;
+  border-left: 1px solid $bordercolor;
+  bottom: 0;
+  left: 25px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &.loading {
+    .buddylistloading {
+      display: block;
+    }
+  }
+
+  &.empty {
+    .buddylistempty {
+      display: block;
+    }
+  }
+
+  .buddycontainer {
+    pointer-events: auto;
+    position: relative;
+    user-select: none;
+  }
+
+  .buddylistempty {
+    bottom: 0;
+    color: $font-color-accent;
+    display: none;
+    font-size: 1.4em;
+    height: 2em;
+    left: 0;
+    margin: auto;
+    padding: .4em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+
+  .buddylistloading {
+    bottom: 0;
+    color: $font-color-accent;
+    display: none;
+    font-size: 1.4em;
+    height: 2em;
+    margin: auto;
+    padding: .4em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+}
+
+.buddy {
+  @include tap-highlight-color($tap-highlight);
+
+  background: $sidepanebg;
+  border-bottom: 1px solid $bordercolor;
+  cursor: pointer;
+  display: block;
+  font-size: 13px;
+  min-height: 66px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    background: $buddylist-action-background;
+  }
+
+  &.withSubline .buddy1,
+  &.contact .buddy1 {
+    top: 15px;
+  }
+
+  &.withSubline .buddy2,
+  &.contact .buddy2 {
+    display: block;
+  }
+
+  &.hovered {
+
+    .buddyactions {
+      right: 0;
+    }
+
+    .buddysessions {
+      max-height: 999px;
+    }
+  }
+
+  .fa.contact:before {
+    content: '\f006';
+  }
+
+  &.contact .fa.contact:before {
+    content: '\f005';
+  }
+
+  &.isself .fa.contact:before {
+    content: '\f192';
+  }
+
+  .buddyPicture {
+    background: $actioncolor1;
+    border-radius: 2px;
+    float: left;
+    height: 46px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 46px;
+
+    .#{$fa-css-prefix} {
+      color: $actioncolor2;
+      font-size: 3em;
+      line-height: 46px;
+    }
+
+    img {
+      bottom: 0;
+      display: block;
+      left: 0;
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .buddyPictureSmall {
+    height: 30px;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 30px;
+
+    .#{$fa-css-prefix} {
+      font-size: 2em;
+      line-height: 30px;
+    }
+  }
+
+  .buddy1 {
+    color: $buddylist-buddy1;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    left: 65px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    text-overflow: ellipsis;
+    top: 24px;
+    white-space: nowrap;
+  }
+
+  .buddy2 {
+    color: $buddylist-buddy2;
+    display: none;
+    left: 65px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    text-overflow: ellipsis;
+    top: 33px;
+    white-space: nowrap;
+  }
+
+  .buddy3 {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0 6px;
+    text-align: left;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 120px;
+  }
+
+  .buddyactions {
+    background: $buddylist-action-background;
+    height: 66px;
+    line-height: 66px;
+    padding: 0 10px;
+    position: absolute;
+    right: -125px;
+    text-align: right;
+    top: 0;
+    transition-duration: .3s;
+    transition-property: right;
+    white-space: nowrap;
+    z-index: 5;
+
+    .btn {
+      font-size: $buddylist-action-font-size;
+      height: 40px;
+      line-height: 40px;
+      padding: 0;
+      text-align: center;
+      vertical-align: middle;
+      width: 42px;
+    }
+  }
+
+  .buddysessions {
+    margin-bottom: 10px;
+    margin-top: 56px;
+    max-height: 0;
+    transition-delay: .1s;
+    transition-duration: .5s;
+    transition-property: max-height;
+
+    ul {
+      border-left: 1px dotted $bordercolor;
+      border-right: 1px dotted $bordercolor;
+      margin: 0 14px;
+      padding-left: 0;
+      padding-top: 10px;
+    }
+
+    ul li {
+      // scss-lint:disable NestingDepth
+      list-style-type: none;
+      margin-bottom: 2px;
+      margin-left: 0;
+
+      .btn-group {
+        visibility: hidden;
+      }
+
+      &:hover .btn-group {
+        visibility: visible;
+      }
+    }
+
+    .currentsession .buddy3 {
+      font-weight: bold;
+    }
+  }
+}

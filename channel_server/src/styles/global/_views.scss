@@ -1,0 +1,55 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+.mainview {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $minbarheight;
+
+  @include breakpt($breakpoint-medium) {
+    left: 0;
+    left: 0;
+  }
+}
+
+.videolayoutSmally .mainview {
+  left: 150px;
+}
+
+.videolayoutClassroom .mainview {
+  left: 360px;
+}
+
+.withChat,
+.withBuddylist {
+  .mainview {
+    right: 260px;
+  }
+}
+
+.withBuddylist {
+  &.withChat .mainview {
+    right: 520px;
+  }
+}

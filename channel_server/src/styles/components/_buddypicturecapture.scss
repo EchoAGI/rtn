@@ -1,0 +1,115 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+.buddyPictureCapture {
+  .picture {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .videoPicture {
+    margin-bottom: 4px;
+
+    .videoPictureVideo {
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    video {
+      object-fit: cover;
+    }
+  }
+
+  .videoPictureVideo {
+    height: 200px;
+    width: 200px;
+
+    .videoPrev,
+    video,
+    .preview {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .videoFlash {
+    background-color: #fff;
+    border: 1px dotted $bordercolor;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 5;
+
+    &.flash {
+      visibility: visible;
+    }
+  }
+
+  .preview {
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    &.previewPicture {
+      position: relative;
+    }
+  }
+
+  .showTakePicture {
+    .btn {
+    }
+  }
+
+  .btn-takePicture,
+  .btn-retakePicture {
+    left: 0;
+    margin: 0 auto;
+    max-width: 40%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+
+  .btn-retakePicture {
+    visibility: hidden;
+  }
+
+  .videoPictureVideo:hover .btn-retakePicture {
+    visibility: visible;
+  }
+
+  .countdownPicture {
+    color: $componentbg;
+    font-size: 45px;
+    left: 0;
+    margin: 0 auto;
+    opacity: .8;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: 0 0 5px #000;
+    top: 75px;
+  }
+}

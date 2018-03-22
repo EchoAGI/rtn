@@ -1,0 +1,41 @@
+# stats available at
+# https://travis-ci.org/strukturag/spreed-webrtc/
+language: go
+
+go:
+  - 1.4
+  - 1.5
+  - 1.6
+  - tip
+
+matrix:
+  allow_failures:
+    - go: tip
+
+env:
+  - GEM_HOME=/var/lib/gems/1.9.1
+
+before_install:
+  - sudo add-apt-repository -y ppa:chris-lea/node.js
+  - sudo apt-get update
+
+install:
+  - sudo apt-get -y install nodejs python-babel ruby1.9.1-dev
+  - sudo gem1.9.1 install compass
+  - sudo gem1.9.1 install scss-lint
+  - npm install
+
+script:
+  - ./autogen.sh
+  - ./configure
+  - make styleshint
+  # TODO(fancycode): enable styleslint once all styles have been fixed
+  # - make styleslint
+  - make styles
+  - make jshint
+  - make javascript
+  - make goget
+  - make test
+  - make binary
+  - make build-i18n
+  - make tarball

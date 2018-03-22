@@ -1,0 +1,110 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+.contactsmanager {
+  .desc {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: baseline;
+  }
+
+  .addbtn {
+    font-size: 14px;
+
+    .fa-users {
+      font-size: 22px;
+    }
+
+    .fa-plus {
+      font-size: 15px;
+    }
+  }
+
+  .editpicture {
+    float: left;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+
+  .uploadbtn {
+    margin-top: 7px;
+  }
+
+  .editlist {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .picture {
+    border-bottom: 0;
+    cursor: auto;
+    display: table-cell;
+    min-height: 46px;
+    position: static;
+    width: auto;
+
+    .buddyPicture {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .table {
+    margin-bottom: 0;
+  }
+
+  tr:first-child td {
+    border-top: 0;
+  }
+
+  .name {
+    text-align: left;
+    vertical-align: middle;
+    width: 40%;
+  }
+
+  .action {
+    padding-right: 15px;
+    text-align: right;
+    vertical-align: middle;
+  }
+}
+
+.contactsmanageredit {
+  .buddy .buddyPicture {
+    margin: 0;
+  }
+}
+
+.search {
+  &:before {
+    content: '\f002';
+    font-family: 'fontAwesome';
+    font-size: 14px;
+    left: 22px;
+    opacity: .4;
+    position: absolute;
+    top: 6px;
+  }
+
+  ~ input {
+    padding-left: 25px;
+  }
+}

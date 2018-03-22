@@ -1,0 +1,69 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#loader { // scss-lint:disable IdSelector
+  background: $load-logo no-repeat center;
+  background-size: contain;
+  bottom: 15%;
+  left: 15%;
+  margin: auto;
+  max-height: 150px;
+  max-width: 200px;
+  opacity: 1;
+  pointer-events: none;
+  position: fixed;
+  right: 15%;
+  top: 15%;
+  transition-duration: .5s;
+  transition-property: opacity;
+  z-index: 20000;
+
+  &.fake-alert {
+    background: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.1em;
+  }
+
+  &.done {
+    opacity: 0;
+  }
+
+  > div {
+    bottom: 0;
+    color: $loading;
+    display: block;
+    font-size: 2em;
+    left: 0;
+    margin: 0 auto;
+    margin-bottom: -40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: 0 0 5px #000;
+  }
+
+  .loader-message {
+    font-size: .5em;
+  }
+}

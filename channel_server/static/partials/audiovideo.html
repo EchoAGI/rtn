@@ -1,0 +1,24 @@
+<div class="audiovideo" ng-class="{'cameraMute': cameraMute, 'microphoneMute': microphoneMute}">
+  <div class="audiovideoBase">
+    <div class="localContainer">
+      <div class="localVideos">
+        <video class="localVideo" autoplay="autoplay" muted="true"></video>
+        <div class="onlyaudio"><i class="fa fa-eye-slash"></i></div>
+        <div class="overlayLogo"></div>
+      </div>
+    </div>
+    <div class="remoteContainer">
+      <div class="remoteVideos nicescroll"></div>
+      <div class="miniContainer" ng-class="{talking: talking}">
+        <video class="miniVideo" autoplay="autoplay" muted="true"></video>
+        <div class="onlyaudio"><i class="fa fa-eye-slash"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="overlayActions" ng-show="peer">
+    <button class="btn btn-link renderer-democrazy" title="{{_('Standard view')}}" ng-click="setRenderer('democrazy')"><i class="fa fa-table"></i></button>
+    <button class="btn btn-link renderer-onepeople" title="{{_('Large view')}}" ng-click="setRenderer('onepeople')"><i class="fa fa-plus-square" ></i></button>
+    <button class="btn btn-link renderer-conferencekiosk" title="{{_('Kiosk view')}}" ng-click="setRenderer('conferencekiosk')"><i class="fa fa-user"></i></button>
+    <button class="btn btn-link renderer-auditorium" title="{{_('Auditorium')}}" ng-click="setRenderer('auditorium')"><i class="fa fa-male"></i><span class="fa"></span></button>
+  </div>
+</div>

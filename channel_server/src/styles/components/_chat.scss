@@ -1,0 +1,615 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+#chat { // scss-lint:disable IdSelector
+  bottom: 0;
+  width: $chat-width;
+  min-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: $buddylist-width;
+  top: 0;
+  z-index: 45;
+}
+
+.withChat {
+  // scss-lint:disable IdSelector
+  #chat {
+    opacity: 1;
+
+    @include breakpt($chat-width + 200, max-width) {
+      left: 0;
+      width: auto;
+    }
+  }
+
+  &.withChatMaximized #chat {
+    left: 0;
+    width: auto;
+  }
+
+  &.withChatMaximized #chat .message {
+    @include breakpt($breakpoint-large, max-width) {
+      max-width: 55%;
+    }
+    @include breakpt($breakpoint-medium, max-width) {
+      max-width: 70%;
+    }
+    @include breakpt($breakpoint-small, max-width) {
+      max-width: 85%;
+    }
+  }
+
+  .chat {
+    pointer-events: auto;
+  }
+}
+
+.chatcontainer {
+  background: $chat-background;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.showchatlist {
+  .chatpane {
+    right: 100%;
+  }
+
+  .chatlist {
+    left: 0;
+  }
+}
+
+.chatlist {
+  background: $chat-background;
+  bottom: 0;
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .list-group {
+    margin-bottom: -1px;
+    margin-top: -1px;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .list-group-item {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    line-height: 26px;
+    min-height: 51px;
+    padding-right: 70px;
+    position: relative;
+
+    &.newmessage {
+      animation: newmessage 1s steps(1) infinite alternate;
+    }
+
+    &.disabled {
+      color: $chat-disabled;
+    }
+
+    &:hover button {
+      display: inline;
+    }
+
+    .fa-lg {
+      display: inline-block;
+      text-align: center;
+      width: 18px;
+    }
+
+    .badge {
+      background: $chat-badge;
+      border: 1px solid #fff;
+      position: absolute;
+      right: 50px;
+      top: 14px;
+    }
+
+    button {
+      display: none;
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
+.chatpane {
+  backface-visibility: hidden;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.chat {
+  // scss-lint:disable NestingDepth
+  background: $chat-background;
+  bottom: 0;
+  display: none;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &.newmessage {
+    .chatheadertitle:after {
+      content: '***';
+      position: absolute;
+      right: 32px;
+      top: 2px;
+    }
+
+    .chatheader {
+      animation: newmessage 1s steps(1) infinite alternate;
+    }
+  }
+
+  &.active.visible {
+    display: block;
+  }
+
+  &.with_pictures .message {
+    &.is_self {
+      padding-right: 34px;
+
+      .timestamp {
+        right: 45px;
+      }
+    }
+
+    &.is_remote {
+      padding-left: 44px;
+    }
+  }
+
+  .chatbodybottom {
+    background: $chat-bottom-background;
+    bottom: 1px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+
+    @include breakpt($breakpoint-chat-small, max-height) {
+      height: auto;
+    }
+  }
+
+  .typinghint {
+    color: $chat-typing;
+    font-size: .8em;
+    height: 16px;
+    overflow: hidden;
+    padding: 0 6px;
+    white-space: nowrap;
+
+    @include breakpt($breakpoint-chat-small, max-height) {
+      display: none;
+    }
+  }
+
+  .inputbox {
+    position: relative;
+
+    @include breakpt($breakpoint-chat-small, max-height) {
+      height: auto;
+    }
+
+    .btn {
+      display: none;
+      padding: .5em 1em;
+      position: absolute;
+      right: 6px;
+      top: 1px;
+    }
+  }
+
+  .input {
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    height: 54px;
+    margin: 0;
+    max-height: 54px; /* FF hack */
+    resize: none;
+    width: 100%;
+
+    @include breakpt($breakpoint-chat-small, max-height) {
+      max-height: 2.5em;
+    }
+
+    &:active,
+    &:focus {
+      border-color: $chat-input-border-color;
+    }
+  }
+
+  .outputbox {
+    bottom: 75px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include breakpt($breakpoint-chat-small, max-height) {
+      bottom: 45px;
+    }
+  }
+
+  .output {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: .4em 0;
+
+    > i {
+      clear: both;
+      color: $chat-meta;
+      display: block;
+      font-size: .8em;
+      padding: 6px 0;
+      text-align: center;
+
+      &.p2p {
+        font-weight: bold;
+        padding: 6px 0;
+      }
+    }
+  }
+
+  .message {
+    // scss-lint:disable DuplicateProperty
+    background: $chat-msg-background;
+    border: 1px solid $chat-msg-border;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0 $chat-msg-shadow;
+    clear: both;
+    display: block;
+    margin: 0 4px 2px 18px;
+    padding: 8px 8px 4px 8px;
+    position: relative;
+    word-wrap: break-word;
+    max-width: 85%;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .timestamp {
+      font-size: .8em;
+      position: absolute;
+      right: 8px;
+      text-align: right;
+      top: 8px;
+    }
+
+    .timestamp-space {
+      float: right;
+      height: 10px;
+      width: 40px;
+    }
+
+    strong {
+      display: block;
+      margin-right: 40px;
+      overflow: hidden;
+      padding-bottom: 2px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    li {
+      line-height: 1.1em;
+      margin: 0 0 4px 0;
+      padding-left: 1.2em;
+      position: relative;
+
+      &:before {
+        color: $chat-msg-default-icon-color;
+        content: '\f075';
+        font-family: FontAwesome;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        width: 12px;
+      }
+
+      &.unread:before {
+        color: $chat-msg-unread-icon-color;
+        content: $chat-msg-unread-icon;
+      }
+
+      &.sending:before {
+        color: $chat-msg-sending-icon-color;
+        content: $chat-msg-sending-icon;
+      }
+
+      &.sent:before {
+        color: $chat-msg-sent-icon-color;
+        content: $chat-msg-sent-icon;
+      }
+
+      &.delivered:before {
+        color: $chat-msg-delivered-icon-color;
+        content: $chat-msg-delivered-icon;
+      }
+
+      &.received:before {
+        color: $chat-msg-received-icon-color;
+        content: $chat-msg-received-icon;
+      }
+
+      &.read:before {
+        color: $chat-msg-read-icon-color;
+        content: $chat-msg-read-icon;
+      }
+    }
+
+    .buddyPicture {
+      background: $actioncolor1;
+      border-radius: 2px;
+      font-size: .7em;
+      height: 30px;
+      left: 4px;
+      overflow: hidden;
+      position: absolute;
+      text-align: center;
+      top: 4px;
+      width: 30px;
+      z-index: 0;
+
+      .#{$fa-css-prefix} {
+        color: $actioncolor2;
+        line-height: 30px;
+      }
+
+      img {
+        bottom: 0;
+        display: block;
+        left: 0;
+        max-height: 100%;
+        max-width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &:before,
+    &:after {
+      border-style: solid;
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+    }
+
+    &.is_remote {
+      float: left;
+      background: $chat-msg-remote-background;
+      color: $chat-msg-remote-color;
+
+      &:before {  // arrow border
+        border-color: transparent $chat-arrow-border;
+        border-width: 7px 11px 7px 0;
+        bottom: auto;
+        left: -12px;
+        top: 4px;
+      }
+
+      &:after { // arrow background
+        border-color: transparent $chat-msg-remote-background;
+        border-width: 6px 10px 6px 0;
+        bottom: auto;
+        left: -11px;
+        top: 5px;
+      }
+    }
+
+    &.is_self {
+      float: right;
+      background: $chat-msg-self-background;
+      color: $chat-msg-self-color;
+      margin-left: 4px;
+      margin-right: 18px;
+      padding-right: 4px;
+
+      &:before { // arrow border
+        border-color: transparent $chat-arrow-border;
+        border-width: 7px 0 7px 11px;
+        top: 4px;
+        bottom: auto;
+        right: -12px;
+      }
+
+      &:after { // arrow background
+        border-color: transparent $chat-msg-self-background;
+        border-width: 6px 0 6px 10px;
+        top: 5px;
+        bottom: auto;
+        right: -11px;
+      }
+
+      li:before {
+        transform: scale(-1, 1);
+      }
+
+      .buddyPicture {
+        left: auto;
+        right: 4px;
+      }
+    }
+
+    &.with_name {
+      // none
+    }
+
+    &.with_hoverimage {
+
+      .buddyPicture {
+        overflow: visible;
+        z-index: initial;
+
+        &:hover .buddyInfoActions {
+          opacity: 1;
+        }
+      }
+
+      .buddyInfoActions {
+        cursor: default;
+        display: inline-block;
+        height: 40px;
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 32px;
+        transition: opacity 0.1s .1s linear;
+        white-space: nowrap;
+        z-index: 1;
+
+        .btn-group {
+          display: block;
+          margin: 0 auto;
+          width: 70px;
+          .btn {
+            width:35px;
+          }
+        }
+
+        .btn-primary {
+          padding: 2px 5px;
+        }
+
+        .fa {
+          color: #fff;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.chatmenu {
+  height: 36px;
+  left: 0;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  top: 36px;
+
+  @include breakpt($breakpoint-chat-small, max-height) {
+    display: none;
+  }
+}
+
+.chatbody {
+  bottom: -1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 74px;
+
+  @include breakpt($breakpoint-chat-small, max-height) {
+    border-top: 1px solid $bordercolor;
+    top: 0;
+    top: 0;
+  }
+}
+
+.chatheader {
+  background: $chat-header;
+  border-bottom: 1px solid $bordercolor;
+  border-left: 1px solid $bordercolor;
+  height: 36px;
+  left: 0;
+  line-height: 34px;
+  padding: 0 4px 0 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include breakpt($breakpoint-chat-small, max-height) {
+    display: none;
+  }
+
+  .chatstatusicon {
+    cursor: pointer;
+    display: block;
+    font-size: 1.4em;
+    height: 36px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 36px;
+  }
+
+  .chatheadertitle {
+    display: inline;
+    padding-left: 28px;
+  }
+
+  .ctrl {
+    color: $chat-ctrl;
+    position: absolute;
+    right: 1px;
+    top: 0;
+
+    .#{$fa-css-prefix} {
+      cursor: pointer;
+      padding: 6px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    max-width: 60%;
+    overflow: hidden;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+}
+
+@keyframes newmessage {
+  0% {background-color: $actioncolor1; border-color: $actioncolor1;}
+  50% {background-color: $componentbg; border-color: $componentbg;}
+  100% {background-color: $actioncolor1; border-color: $actioncolor1;}
+}

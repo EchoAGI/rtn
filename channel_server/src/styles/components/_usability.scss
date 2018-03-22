@@ -1,0 +1,76 @@
+/*
+ * Spreed WebRTC.
+ * Copyright (C) 2013-2015 struktur AG
+ *
+ * This file is part of Spreed WebRTC.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+
+.withChat,
+.withBuddylist {
+  // scss-lint:disable IdSelector
+  #help {
+    right: 260px;
+  }
+}
+
+.withChat.withBuddylist,
+.withSettings {
+  // scss-lint:disable IdSelector
+  #help {
+    right: 520px;
+  }
+}
+
+#help { // scss-lint:disable IdSelector
+  bottom: 10px;
+  color: #aaa;
+  font-size: 1.1em;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 0 5px #000;
+  top: 80px;
+  transition: right 200ms ease-in-out;
+  user-select: none;
+  width: 350px;
+}
+
+.help {
+  @include breakpt($breakpoint-useability-small, max-width, only screen) {
+    display: none;
+  }
+
+  @include breakpt($breakpoint-useability-small, min-width, only screen, $breakpoint-useability-large) {
+    font-size: 1em;
+    width: 250px;
+  }
+
+  > div {
+    margin: 0 10px;
+  }
+
+  .help-subline {
+    color: #888;
+    padding: 20px 0;
+  }
+
+  .btn {
+    text-shadow: none;
+  }
+}
