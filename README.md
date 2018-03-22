@@ -11,6 +11,6 @@
 ## Major Contributors
 |Name|Avatar|Name|Avatar|Name|Avatar|
 |---|---|---|---|---|---|
-|[edison](https://github.com/newtalentxp) |  ![](https://avatars3.githubusercontent.com/u/5370542?v=3&s=60)  |[fioman](https://github.com/fioman) |  ![](https://avatars3.githubusercontent.com/u/1522494?v=3&s=60)  | [haosen](https://github.com/haosen)       |  ![](https://avatars2.githubusercontent.com/u/6976367?v=3&s=60)
+|[edison](https://github.com/newtalentxp) |  ![](https://avatars2.githubusercontent.com/u/1500351?v=3&s=60)  |[fioman](https://github.com/fioman) |  ![](https://avatars0.githubusercontent.com/u/1495834?v=3&s=60)  | [haosen](https://github.com/haosen)       |  ![](https://avatars2.githubusercontent.com/u/6976367?v=3&s=60)
 
 ## Contact US(联系我们)
