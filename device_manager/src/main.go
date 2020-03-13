@@ -20,9 +20,9 @@ import (
 
 func main() {
 	appid := "LTAI82fei8OjVVIU"
-	appsecret := "ow2HnGumKHdbtwmGVoGliE4D6peyNJ"
-	groupId := "GID_wwj_dvc"
-	clientId := groupId + "@@@" + "edison"
+	appsecret := "xxx"
+	groupId := "GID_x_y"
+	clientId := groupId + "@@@" + "abc"
 
 	token := bus.GenToken(groupId, appsecret)
 	log.Infof("token: %s\n", token)
